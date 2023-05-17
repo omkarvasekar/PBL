@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Students Complaint system</title>
+    <link rel="stylesheet" href="homestyle.css">
+</head>
+<style>
+    * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+.big-img {
+    background-image: url(https://www.zenloop.com/en/wp-content/uploads/sites/2/2021/03/beschwerdenmanagement-preview.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+}
+
+nav {
+    background-color: #173852;
+    height: 75px;
+}
+
+#stud {
+    line-height: 70px;
+    color: rgb(230, 230, 238);
+    font-size: xx-large;
+    padding: 0px 100px;
+    font-weight: bold;
+}
+
+nav ul {
+    float: right;
+    margin-right: 50px;
+}
+
+nav ul li {
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    font-size: 17px;
+    text-transform: uppercase;
+}
+
+.active:hover {
+    color: yellow;
+}
+
+.formbox
+{
+    width: 110%;
+    height: 80%;
+    max-width: 450px;
+    position:absolute;
+    top: 45%;
+    left:50%;
+    transform: translate(-50%,-40%);
+    background:#fff;
+    padding: 50px 60px 75px;
+    text-align: center;
+    border-radius: 15px;
+}
+
+.signup_link{
+    margin-top: 10px;
+}
+
+.formbox h1{
+    font-size: 35px;
+    margin-bottom: 60px;
+    color: #153854;
+    font-family:  'Arial Narrow Bold', sans-serif;
+    position: relative;
+}
+
+.formbox h1::after{
+    content: ' ';
+    width: 30px;
+    height: 4px;
+    border-radius: 3px;
+    background: #153854;
+    position: absolute;
+    bottom: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.input-field{
+    background:#d0d3d5fd ;
+    margin: 10px 0px;
+    border-radius: 3px;
+    display: flex;
+    align-items: center;
+
+}
+.input-field1{
+    background:#d0d3d5fd ;
+    margin: 4px 0px;
+    height: 150px;
+    border-radius: 3px;
+    display: flex;
+    align-items: center;
+
+}
+input{
+    width: 100%;
+    height: 20% ;
+    background: transparent;
+    border:0;
+    outline: 0;
+    padding:18px 15px;
+}
+
+form p{
+    margin-top: 5px;
+    text-align: left;
+    font-size: 13px;
+}
+form p a{
+    text-decoration: none;
+    color: #3c00a0;
+}
+
+.buttonfield
+{
+    
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    
+} 
+
+.buttonfield button{
+    flex-basis: 48%;
+    
+    background: #173852;
+    color: #fff;
+    height:40px;
+    border-radius: 20px;
+    border: 0;
+    outline:0;
+    cursor: pointer;
+    transition: 1s;
+}
+
+
+.buttonfield button.disable{
+    background: #eaeaea;
+    color: #555;
+}
+.input-group{
+    height: 150px;
+}
+
+select {
+        appearance: right;
+        outline: 0;
+        background:#d0d3d5fd ;
+        
+        background-image: none;
+        width: 125%;
+        height: 50px;
+        
+        cursor: pointer;
+        border: 1px ;
+        border-radius: 3px;
+    }
+     
+.select {
+    position: relative;
+    display: block;
+    margin:auto;
+    width: 100%;
+    height: 10%;
+    line-height: 3;
+    overflow: hidden;
+    border-radius: .25em;
+    padding:10px 1px;
+}
+</style>
+<body>
+    <div class="big-img">
+        <nav>
+            <label id="stud">Students Complaint System</label>
+            <ul>
+                <li><a class="active" href="/studentdash/<%=erp%>">Home</a></li>
+                <li><a class="active" href="/about">About Us</a></li>
+                <li><a class="active" href="/adminlogin">Admin Login</a></li>
+                <li><a class="active" href="/contact">Contact Us</a></li>
+            </ul>
+        </nav>
+        <div class="container">
+            <div class="formbox">
+                <h1 id="title">COMPLAINT FORM</h1>
+                <form action="/form" METHOD="POST">
+                    
+                     <div class="input-group"> 
+
+                        <div class="input-field">
+                            <input type="text" value="<%=erp%>" id="namefield" name="erp" readonly >
+                        </div>
+                        
+
+
+
+                        
+                        
+                        <div>
+                            <div class="select">
+                            <select name="comptype" id="slct">
+                                <option value="DEFAULT" placeholder="COMPLAINT CATEGORY" >COMPLAINT CATEGORY </option>
+                                <option value="ACADEMIC"> Academic/Faculty Related</option>
+                                <option value="LAB"> Laboratory/Classroom </option>
+                                <option value="Infrastructure"> Infrastructure/Cleanliness </option>
+                                <option value="other"> Other</option>
+                                
+                                </select>
+                            </div>
+                            <input type="text" id="compstatus" name="compstatus" value="unresolved" style="display: none;">
+
+                                
+                                <div class="input-field1">
+                                    <input type="text" name='message' placeholder="Explain Your Complaint in 60-70 words:" required>
+                                </div>
+                                <DIV class="buttonfield">
+
+                                    <button type="reset"> RESET </button>
+                                    <button type="submit"> SUBMIT </button>
+                                </DIV>
+
+                                
+                             </select>
+                        </div>
+                        
+                        
+                    </div> 
+                    
+                    
+                </form>
+
+            </div>
+
+        </div>
+    </div>
+</body>
+<script>
+    let signupbtn = document.getElementById("signupbtn");
+    
+
+
+</script>
+
+
+</html>

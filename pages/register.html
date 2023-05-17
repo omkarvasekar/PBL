@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Students Complaint system</title>
+    <link rel="stylesheet" href="homestyle.css">
+
+    <style>
+        .input-field {
+            background: #d0d3d5fd;
+            margin: 15px 0px;
+            border-radius: 3px;
+            display: flex;
+            align-items: center;
+
+        }
+        * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+.big-img {
+    background-image: url(navbg.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+}
+
+nav {
+    background-color: #173852;
+    height: 75px;
+}
+
+#stud {
+    line-height: 70px;
+    color: rgb(230, 230, 238);
+    font-size: xx-large;
+    padding: 0px 100px;
+    font-weight: bold;
+}
+
+nav ul {
+    float: right;
+    margin-right: 50px;
+}
+
+nav ul li {
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    font-size: 17px;
+    text-transform: uppercase;
+}
+
+.active:hover {
+    color: yellow;
+}
+
+.formbox
+{
+    width: 90%;
+    max-width: 450px;
+    position:absolute;
+    top: 47%;
+    left:50%;
+    transform: translate(-50%,-40%);
+    background:#fff;
+    padding: 50px 60px 75px;
+    text-align: center;
+    border-radius: 15px;
+}
+
+/* #user{
+    width: 100%;
+    background: transparent;
+    border:0;
+    outline: 0;
+    padding:18px 15px;
+    background:#d0d3d5fd ;
+} */
+.signup_link{
+    margin-top: 10px;
+}
+
+.formbox h1{
+    font-size: 35px;
+    margin-bottom: 60px;
+    color: #153854;
+    font-family:  'Arial Narrow Bold', sans-serif;
+    position: relative;
+}
+
+.formbox h1::after{
+    content: ' ';
+    width: 30px;
+    height: 4px;
+    border-radius: 3px;
+    background: #153854;
+    position: absolute;
+    bottom: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+/* .input-field{
+    background:#d0d3d5fd ;  
+    margin: 15px 0px;
+    border-radius: 3px;
+    display: flex;
+    align-items: center;
+
+} */
+input{
+    width: 100%;
+    background: transparent;
+    border:0;
+    outline: 0;
+    padding:18px 15px;
+}
+
+form p{
+    margin-top: 5px;
+    text-align: left;
+    font-size: 13px;
+}
+form p a{
+    text-decoration: none;
+    color: #3c00a0;
+}
+
+.buttonfield
+{
+    /* margin-top: 20px;  */
+    display: flex;
+    justify-content: center;
+}
+
+.buttonfield button{
+    flex-basis: 48%;
+    width: 100%;
+    background: #173852;
+    color: #fff;
+    height:40px;
+    border-radius: 20px;
+    border: 0;
+    outline:0;
+    cursor: pointer;
+    transition:  1s;
+    margin-top: 50px;
+}
+
+
+.buttonfield button.disable{
+    background: #eaeaea;
+    color: #555;
+}
+.input-group{
+    height: 150px;
+}
+
+.about
+{
+  
+    width: 90%;
+    position:absolute;
+    top: 37%;
+    left:50%;
+    transform: translate(-50%,-20%);
+    background:#fff;
+    padding: 50px 60px 75px;
+    text-align: justify;
+    border-radius: 15px;
+
+}
+
+#title{
+    display: flex;
+    justify-content: center;
+}
+
+    </style>
+</head>
+
+<body>
+    <div class="big-img">
+        <nav>
+            <label id="stud">Students Complaint System</label>
+            <ul>
+                <li><a class="active" href="/">Home</a></li>
+                <li><a class="active" href="/about">About Us</a></li>
+                <li><a class="active" href="/adminlogin">Admin Login</a></li>
+                <li><a class="active" href="/contact">Contact Us</a></li>
+            </ul>
+        </nav>
+        <div class="container">
+            <div class="formbox">
+                <h1 id="title">Sign Up</h1>
+                <form method="POST" action="/register">
+                    <div class="input-group">
+
+                        <div class="input-field">
+                            <input type="text" placeholder="ERP ID" id="namefield" name="username">
+                        </div>
+
+                        <div class="input-field">
+                            <input type="password" placeholder="New Password" name="password">
+                        </div>
+                        <div class="inputfield"></div>
+                        
+                        <div class="input-field">
+                            <input type="password" placeholder="Confirm Password" name="confirmpassword">
+                        </div>
+                        
+                    </div>
+                    <div class="buttonfield">
+                        <button type="submit" id="signupbtn">Sign up</button>
+                    </div>
+                    <!-- <div class="signup_link">
+                        Not Registered?<a href="#">Sign up</a>
+                    </div> -->
+                </form>
+
+            </div>
+
+        </div>
+    </div>
+</body>
+<script>
+    let signupbtn = document.getElementById("signupbtn");
+    let signinbtn = document.getElementById("signinbtn");
+    let namefield = document.getElementById("namefield");
+    let title = document.getElementById("title");
+
+
+</script>
+
+
+</html>

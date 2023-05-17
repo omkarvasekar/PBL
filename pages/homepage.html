@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Students Complaint system</title>
+    <link rel="stylesheet" href="homestyle.css">
+    <style>
+        .input-field {
+            background: #d0d3d5fd;
+            margin: 15px 0px;
+            border-radius: 3px;
+            display: flex;
+            align-items: center;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="big-img">
+        <nav>
+            <label id="stud">Students Complaint System</label>
+            <ul>
+                <li><a class="active" href="/">Home</a></li>
+                <li><a class="active" href="/about">About Us</a></li>
+                <li><a class="active" href="/adminlogin">Admin Login</a></li>
+                <li><a class="active" href="/contact">Contact Us</a></li>
+            </ul>
+        </nav>
+        <div class="container">
+            <div class="formbox">
+                <h1 id="title">Sign In</h1>
+                <form method="POST" action="/">
+                    <div class="input-group">
+
+                        <div class="input-field">
+                            <input type="text" placeholder="ERP ID" id="namefield" name="username">
+                        </div>
+
+                        <div class="input-field">
+                            <input type="password" placeholder="New Password" name="password">
+                        </div>
+                        
+
+
+                    </div>
+                    <div class="buttonfield">
+                        <button type="submit" id="signupbtn">Sign In</button>
+                    </div>
+                    <div class="signup_link">
+                        Not Registered?<a href="/register">Sign up</a>
+                    </div>
+                </form>
+
+            </div>
+
+        </div>
+    </div>
+</body>
+<script>
+    let signupbtn = document.getElementById("signupbtn");
+    let signinbtn = document.getElementById("signinbtn");
+    let namefield = document.getElementById("namefield");
+    let title = document.getElementById("title");
+
+
+</script>
+
+
+</html>

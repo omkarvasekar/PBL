@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Your Complaints</title>
+  <link rel="stylesheet" href="../public/style.css">
+  <style>
+    @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,600);
+
+*, *:before, *:after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.btn {
+  appearance: none;
+    -webkit-appearance: none;
+  font-family: sans-serif;
+  cursor: pointer;
+  padding: 12px;
+  min-width: 100px;
+  border: 0px;
+    -webkit-transition: background-color 100ms linear;
+    -ms-transition: background-color 100ms linear;
+     transition: background-color 100ms linear;
+}
+
+.btn:focus, .btn.focus {
+  outline: 0;
+}
+
+.btn-round-1 {
+  border-radius: 8px;
+}
+
+.btn-round-2 {
+  border-radius: 20px;
+}
+
+.btn-dark {
+  background: #000;
+  color: #ffffff;
+}
+
+.btn-dark:hover {
+  background: #212121;
+  color: #ffffff;
+}
+
+.btn-light {
+  background: #ededed;
+  color: #000;
+}
+
+.btn-light:hover {
+  background: #dbdbdb;
+  color: #000;
+}
+
+.btn-primary {
+  background: #3498db;
+  color: #ffffff;
+}
+
+.btn-primary:hover {
+  background: #2980b9;
+  color: #ffffff;
+}
+
+.btn-success {
+  background: #2ecc71;
+  color: #ffffff;
+}
+
+.btn-success:hover {
+  background: #27ae60;
+  color: #ffffff;
+}
+
+.btn-warning {
+  background: #f1c40f;
+  color: #ffffff;
+}
+
+.btn-warning:hover {
+  background: #f39c12;
+  color: #ffffff;
+}
+
+.btn-danger {
+  background: #e74c3c;
+  color: #ffffff;
+}
+
+.btn-danger:hover {
+  background: #c0392b;
+  color: #ffffff;
+}
+
+body {
+  background: #105469;
+  font-family: 'Open Sans', sans-serif;
+}
+table {
+  background: #012B39;
+  border-radius: 0.25em;
+  border-collapse: collapse;
+  margin: 1em;
+}
+th {
+  border-bottom: 1px solid #364043;
+  color: #E2B842;
+  font-size: 0.85em;
+  font-weight: 600;
+  padding: 0.5em 1em;
+  text-align: left;
+}
+td {
+  color: #fff;
+  font-weight: 400;
+  padding: 0.65em 1em;
+}
+.disabled td {
+  color: #4F5F64;
+}
+tbody tr {
+  transition: background 0.25s ease;
+}
+tbody tr:hover {
+  background: #014055;
+}
+#stud {
+    line-height: 70px;
+    color: rgb(230, 230, 238);
+    font-size: xx-large;
+    padding: 0px 100px;
+    font-weight: bold;
+}
+
+nav ul {
+    float: right;
+    margin-right: 50px;
+}
+
+nav ul li {
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    font-size: 17px;
+    text-transform: uppercase;
+}
+
+.active:hover {
+    color: yellow;
+}
+  </style>
+  
+
+</head>
+
+<body>
+  <!-- partial:index.partial.html -->
+  <nav>
+    <label id="stud">Students Complaint System</label>
+    <ul>
+        <li><a class="active" href="/studentdash/<%=erp%>">Home</a></li>
+        
+    </ul>
+</nav>
+  <br>
+  <br>
+  <p style="color: azure;">
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Your Complaints
+  </p>
+  <table>
+    <thead>
+      <tr>
+
+        <th>ERP
+        <th>ComplaintType
+        <th>ComplaintDescrption
+        <th>Complaint Status</th>
+        
+
+    </thead>
+    <tbody>
+      <% users.forEach((users)=> { %>
+        <tr>
+          <td>
+            <%=users.erp %>
+          </td>
+          
+          <td>
+            <%=users.comptype%>
+          </td>
+          <td>
+            <%=users.message%>
+          </td>
+          <td>
+            <%=users.compstatus%>
+          </td>
+          <td>
+            
+          <!-- onsubmit="setTimeout(function(){window.location.reload(true)},10)" -->
+
+          <!-- <td><button><a href="/chngstat/<%=users._id%>">Change</a></button></td> -->
+        </tr>
+        <% }) %>
+    </tbody>
+  </table>
+  <!-- partial -->
+
+  <br>
+  <br>
+  <!-- <p style="color: azure;">
+    &nbsp;&nbsp;&nbsp;&nbsp;Click Back  On Browser To Go To Previous Page
+  </p> -->
+  
+
+  <script>
+    // location.replace('/complaint'
+    function myfunc() {
+      setTimeout(function () {
+        location.reload();
+      }, 10)
+    }
+
+  </script>
+</body>
+
+</html>

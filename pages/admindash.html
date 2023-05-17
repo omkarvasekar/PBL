@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Students Complaint system</title>
+    <link rel="stylesheet" href="homestyle.css">
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: center;
+        box-sizing: border-box;
+
+        height: max-content;
+        text-decoration: none;
+        list-style: none;
+    }
+
+    .big-img {
+        background-image: url(https://www.zenloop.com/en/wp-content/uploads/sites/2/2021/03/beschwerdenmanagement-preview.jpeg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: 100vh;
+    }
+
+    nav {
+        background-color: #173852;
+        height: 75px;
+    }
+
+    #stud {
+        line-height: 70px;
+        color: rgb(230, 230, 238);
+        font-size: xx-large;
+        padding: 0px 100px;
+        font-weight: bold;
+    }
+
+    nav ul {
+        float: right;
+        margin-right: 50px;
+    }
+
+    nav ul li {
+        display: inline-block;
+        line-height: 80px;
+        margin: 0 15px;
+    }
+
+    nav ul li a {
+        color: white;
+        font-size: 17px;
+        text-transform: uppercase;
+    }
+
+    .active:hover {
+        color: yellow;
+    }
+
+    .formbox1 {
+        width: 45%;
+        background-color: #173852;
+
+        box-sizing: content-box;
+        height: 6%;
+        padding-top: 1%;
+        padding-left: 1%;
+        max-width: 400px;
+        position: absolute;
+        top: 38%;
+        left: 35%;
+
+        font-size: large;
+        background: #fff;
+        text-align: left;
+        font-size: medium;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+        float: left;
+        border-radius: 15px;
+    }
+
+    .formbox2 {
+        width: 70%;
+        box-sizing: content-box;
+        height: 18%;
+        padding-left: 1%;
+        padding-top: 1.5%;
+        max-width: 400px;
+        position: absolute;
+        top: 48%;
+        left: 35%;
+        font-size: medium;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        background: #fff;
+
+        text-align: LEFT;
+        border-radius: 15px;
+    }
+
+    .formbox3 {
+        width: 70%;
+        box-sizing: content-box;
+        height: 8.9%;
+        padding-left: 0.9%;
+        padding-top: 0.8%;
+        max-width: 400px;
+        position: absolute;
+        top: 72%;
+        left: 35%;
+        font-size: medium;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        background: transparent;
+
+        text-align: LEFT;
+        border-radius: 15px;
+
+    }
+
+
+    .signup_link {
+        margin-top: 10px;
+    }
+
+
+    .buttonfield {
+        margin-top: center;
+        display: flex;
+
+        justify-content: center;
+        margin-bottom: 15px;
+        /* margin-top: 5px; */
+    }
+
+    .buttonfield button {
+        flex-basis: 48%;
+        width: 100%;
+        background: #173852;
+        color: #fff;
+        height: 50px;
+        border-radius: 30px;
+        border: 0;
+        outline: 0;
+        cursor: pointer;
+        transition: 1s;
+    }
+
+
+    .buttonfield button.disable {
+        background: #eaeaea;
+        color: #555;
+        margin-bottom: 5px;
+
+    }
+
+    .input-group {
+        height: 150px;
+    }
+
+    .input-field {
+        background: #d0d3d5fd;
+        margin: 15px 0px;
+        border-radius: 3px;
+        display: flex;
+        align-items: center;
+
+    }
+</style>
+
+<body>
+    <div class="big-img">
+        <nav>
+            <label id="stud">Students Complaint System</label>
+            <ul>
+                <li><a class="active" href="#">Home</a></li>
+                <li><a class="active" href="#">About Us </a></li>
+                <li><a class="active" href="#">admin Login</a></li>
+                <li><a class="active" href="#">Contact Us</a></li>
+
+                <li><a class="active" href="#">Logout</a></li>
+
+
+
+            </ul>
+        </nav>
+        <div class="container">
+
+
+            <form class="formbox1" style="background-color: rgb(229, 224, 224);">
+                <div class="input-field">
+                    ERP ID:
+                </div>
+
+            </form>
+
+
+            <form class="formbox2" style="background-color: rgb(229, 224, 224);">
+                <div class="input-field">
+                    TOTAL COMPLAINT:
+                </div><BR>
+                <div class="input-field">
+                    NO. OF RESOLVED COMPLAINT:
+                </div><BR>
+                <div class="input-field">
+                    NO. OF UNRESOLVED COMPLAINT:
+                </div>
+
+            </form>
+
+            <form class="formbox3">
+                <div class="buttonfield">
+                    <button type="button" id="signupbtn">CHANGE STATUS </button>
+                </div>
+            </form>
+
+
+
+
+        </div>
+    </div>
+</body>
+<script>
+    let signupbtn = document.getElementById("signupbtn");
+
+
+
+</script>
+
+
+</html>
