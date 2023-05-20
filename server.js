@@ -11,7 +11,7 @@ const app = express();
 const UserDetails = require('./userDetails');
 const AdminDetails = require('./admindetail');
 const PORT = 9918;
-app.set('view-engine', 'ejs')
+// app.set('view-engine', 'ejs')
 app.set('view engine', 'ejs');
 app.use(express.static(__dirname + '/public'));
 app.use(bodyParser.json());
