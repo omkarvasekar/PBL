@@ -98,7 +98,7 @@ app.post(
         failureFlash: false
     }),
     async function (req, res) {
-        console.log(req.body);
+        // console.log(req.body);
         const show = await complaint.find();
         const resolvcnt = await complaint.find({ compstatus: 'resolved' })
         const unresolvcnt = await complaint.find({ compstatus: 'unresolved' })
@@ -121,7 +121,7 @@ app.get('/contact', (req, res) => {
 })
 app.get('/studentdash/:id', isLoggedIn,(req, res) => {
     // console.log(req.isAuthenticated())
-    console.log(req.body)
+    // console.log(req.body)
     res.render('studentdash', {
         erp: req.params.id
     })
@@ -136,7 +136,7 @@ app.get('/form/:id', (req, res) => {
 
 
 app.post('/form', (req, res) => {
-    console.log(req.body);
+    // console.log(req.body);
     let comp = new complaint(req.body);
     comp.save().then(item => {
         // res.send("item saved to database");
