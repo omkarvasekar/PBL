@@ -9,7 +9,7 @@ const passportLocalMongoose = require('passport-local-mongoose');
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
-mongoose.connect("mongodb+srv://vasekar_omkar:ZU69mvR9mLP2BZrH@cluster0.sybnjnv.mongodb.net/ProjectDB");
+mongoose.connect("mongodb://0.0.0.0:27017/ProjectDB");
 
 
 
